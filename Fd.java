@@ -4,7 +4,7 @@ import java.sql.*;
 import javax.swing.*;
 
 public class Fd extends JFrame {
-//	extends JFrame‚Ì‚Ù‚¤‚ª—Ç‚¢H
+//	extends JFrameã®ã»ã†ãŒè‰¯ã„ï¼Ÿ
 
 	public int i, j, k, l, m, n, o, p, q, r, s, t, u, v;
 	public int intCount;
@@ -37,69 +37,70 @@ public class Fd extends JFrame {
 	//fatima.setIcon(icon2);
 	//pnlMdl.add(fatima);
 
-	//ˆê’i–Ú
+	//ä¸€æ®µç›®
 	JPanel panelAbove;
 	JRadioButton teachAi;
 	JRadioButton hearAi;
 	ButtonGroup tandh = new ButtonGroup();
 	JButton indx;
 
-	//“ñ’i–Ú
+	//äºŒæ®µç›®
 	public JLabel angry;
 
-	//O’i–Ú
+	//ä¸‰æ®µç›®
 	public JPanel angPnl = new JPanel();
 	public JRadioButton[] radios = new JRadioButton[10];
 	public ButtonGroup group = new ButtonGroup();
-	public JTextField ending1 = new JTextField("AI‚Ìƒtƒ@ƒeƒBƒ}‚ªƒuƒ‰ƒEƒU‚Ì‘O‚Å•…‚Á‚Ä‚é‚ ‚È‚½‚ğ“K“–‚ÉˆÔ‚ß‚éƒAƒvƒŠ‚Å‚·B",40);
+	public JTextField ending1 = new JTextField("AIã®ãƒ•ã‚¡ãƒ†ã‚£ãƒãŒãƒ–ãƒ©ã‚¦ã‚¶ã®å‰ã§è…ã£ã¦ã‚‹ã‚ãªãŸã‚’é©å½“ã«æ…°ã‚ã‚‹ã‚¢ãƒ—ãƒªã§ã™ã€‚",40);
 
-	//l’i–Ú
+	//å››æ®µç›®
 	public JLabel grief;
 
-	//ŒÜ’i–Ú
+	//äº”æ®µç›®
 	public JPanel grfPnl = new JPanel();
 	public JRadioButton[] radiosx = new JRadioButton[10];
 	public ButtonGroup groupx = new ButtonGroup();
-	public JTextField ending2 = new JTextField("‚Ü‚½A”Ş—‚ÉŠ´î‚â‘äŒ‚ğŠo‚¦‚³‚¹‚é–‚à‚Å‚«‚Ü‚·‚ªA‚ ‚È‚½Ÿ‘æ‚Å‚·B",40);
+	public JTextField ending2 = new JTextField("ã¾ãŸã€å½¼å¥³ã«æ„Ÿæƒ…ã‚„å°è©ã‚’è¦šãˆã•ã›ã‚‹äº‹ã‚‚ã§ãã¾ã™ãŒã€ã‚ãªãŸæ¬¡ç¬¬ã§ã™ã€‚",40);
 
-	//˜Z’i–Ú
-	public JTextField syng = new JTextField("Spit it out(AI‚ÉŠo‚¦‚³‚¹‚½‚¢‘äŒ)!",25);
+	//å…­æ®µç›®
+	public JTextField syng = new JTextField("Spit it out(AIã«è¦šãˆã•ã›ãŸã„å°è©)!",25);
 
-	//ˆÈã‚T‚Â‚Ì—v‘f‚ğÚ‚¹‚éƒ~ƒhƒ‹ƒpƒlƒ‹
+	//ä»¥ä¸Šï¼•ã¤ã®è¦ç´ ã‚’è¼‰ã›ã‚‹ãƒŸãƒ‰ãƒ«ãƒ‘ãƒãƒ«
 	public JPanel pnlMdl = new JPanel();
 
-	//Å‰º’i‚Å‘S‚Ä‚ÌƒRƒ}ƒ“ƒh‚ğÀs
+	//æœ€ä¸‹æ®µã§å…¨ã¦ã®ã‚³ãƒãƒ³ãƒ‰ã‚’å®Ÿè¡Œ
 	JButton btnAction = new JButton("Commit On!");
-
+	
+	//ã‚¢ãƒ—ãƒ¬ãƒƒãƒˆã«ã™ã‚‹å ´åˆã¯public void init(){}ã§JFrameã‚’JAppletã«extendã ãŒãƒ»ãƒ»ãƒ»
 	public Fd(String title) {
 
 		super(title);
 
-		// ƒtƒŒ[ƒ€‚ğì¬‚µ‚ÄƒŒƒCƒAƒEƒg‚ğƒZƒbƒg
+		// ãƒ•ãƒ¬ãƒ¼ãƒ ã‚’ä½œæˆã—ã¦ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆã‚’ã‚»ãƒƒãƒˆ
 		pnlMdl.setLayout(new GridLayout(5,1));
 
-		//ˆê’i–Ú‚Ìƒpƒlƒ‹ƒŒƒCƒAƒEƒg
+		//ä¸€æ®µç›®ã®ãƒ‘ãƒãƒ«ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆ
 		panelAbove = new JPanel();
 		panelAbove.setLayout(new GridLayout(1,3));
 		teachAi = new JRadioButton("Teach Ai",true);
 		hearAi = new JRadioButton("U hear Ai");
 		indx = new JButton("To Home");
 
-		// ƒpƒlƒ‹‚Éƒ{ƒ^ƒ“‚ğƒZƒbƒg
+		// ãƒ‘ãƒãƒ«ã«ãƒœã‚¿ãƒ³ã‚’ã‚»ãƒƒãƒˆ
 		tandh.add(teachAi);
 		tandh.add(hearAi);
 		panelAbove.add(teachAi);
 		panelAbove.add(hearAi);
 		panelAbove.add(indx);
 
-		//ˆê’i–Ú‚ğJFrame‚Éæ‚¹‚é
+		//ä¸€æ®µç›®ã‚’JFrameã«ä¹—ã›ã‚‹
 		this.add(panelAbove);
 
-		//ƒ‰ƒxƒ‹‚Éƒ‰ƒWƒIƒ{ƒ^ƒ“‘I‘ğ‚ÅƒeƒLƒXƒg‘‚«Š·‚¦
+		//ãƒ©ãƒ™ãƒ«ã«ãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³é¸æŠã§ãƒ†ã‚­ã‚¹ãƒˆæ›¸ãæ›ãˆ
 		angry = new JLabel();
 		grief = new JLabel();
 
-		//AI‚É‹³‚¦‚éŠ´î
+		//AIã«æ•™ãˆã‚‹æ„Ÿæƒ…
 		teachAi.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 
@@ -109,7 +110,7 @@ public class Fd extends JFrame {
 			grfPnl.removeAll();
 
 			angry.setIcon(icon);
-			angry.setText("Fatima's degree of kawaii(ƒtƒ@ƒeƒBƒ}‚Ì–£—Í“x)");
+			angry.setText("Fatima's degree of kawaii(ãƒ•ã‚¡ãƒ†ã‚£ãƒã®é­…åŠ›åº¦)");
 
 			for(i=0;i<10;i++) {
 				if(i == 5){radios[i] = new JRadioButton("["+i+"]",true);}
@@ -118,7 +119,7 @@ public class Fd extends JFrame {
 				angPnl.add(radios[i]);
 			}
 
-			grief.setText("Fatima's degree of grief(ƒtƒ@ƒeƒBƒ}‚Ìœ‚µ‚İ“x)");
+			grief.setText("Fatima's degree of grief(ãƒ•ã‚¡ãƒ†ã‚£ãƒã®æ…ˆã—ã¿åº¦)");
 
 			for(j=0;j<10;j++) {
 				if(j == 5){radiosx[j] = new JRadioButton("["+j+"]",true);}
@@ -126,7 +127,7 @@ public class Fd extends JFrame {
 				groupx.add(radiosx[j]);
 				grfPnl.add(radiosx[j]);
 			}
-			syng.setText("Spit it out(ƒtƒ@ƒeƒBƒ}‚ªŠo‚¦‚é‚æ)!");
+			syng.setText("Spit it out(ãƒ•ã‚¡ãƒ†ã‚£ãƒãŒè¦šãˆã‚‹ã‚ˆ)!");
 
 			pnlMdl.add(angry);
 			pnlMdl.add(angPnl);
@@ -148,9 +149,9 @@ public class Fd extends JFrame {
 			angPnl.removeAll();
 			grfPnl.removeAll();
 
-			syng.setText("Spit it out(‚»‚¤‚¾“f‚«‚¾‚¹’N‚ª‘‚¢‚ñ‚¾‚¢)");
+			syng.setText("Spit it out(ãã†ã åãã ã›èª°ãŒæ†ã„ã‚“ã ã„)");
 			angry.setIcon(null);
-			angry.setText("Your degree of anger(‹M•û‚Ì“{‚è“x)");
+			angry.setText("Your degree of anger(è²´æ–¹ã®æ€’ã‚Šåº¦)");
 
 			for(k=0; k<9; k++) {
 				if(k == 5){radios[k] = new JRadioButton("["+k+"]",true);}
@@ -159,7 +160,7 @@ public class Fd extends JFrame {
 				angPnl.add(radios[k]);
 			}
 
-			grief.setText("Your degree of grief(‹M•û‚Ì•…‚è“x)");
+			grief.setText("Your degree of grief(è²´æ–¹ã®è…ã‚Šåº¦)");
 
 			for(l=0; l<9; l++) {
 				if(l == 5){radiosx[l] = new JRadioButton("["+l+"]",true);}
@@ -192,7 +193,7 @@ public class Fd extends JFrame {
 
 			//grief.setIcon(icon);
 			grief.setText("Cause Fatima-AI is always on your side,Punks!");
-			syng.setText("All rights reserverd by MuonŠé‰æ.corp[‚²ˆÓŒ©’¸‚¢‚Ä‚à‰Ë‹ó‚Ì‰ïĞ‚È‚Ì‚Å“Í‚«‚Ü‚¹‚ñ]");
+			syng.setText("All rights reserverd by Muonä¼ç”».corp[ã”æ„è¦‹é ‚ã„ã¦ã‚‚æ¶ç©ºã®ä¼šç¤¾ãªã®ã§å±Šãã¾ã›ã‚“]");
 
 			angPnl.add(ending1);
 			grfPnl.add(ending2);
@@ -214,9 +215,9 @@ public class Fd extends JFrame {
 
 				try{
 	
-				// æ’öƒCƒ“ƒXƒg[ƒ‹‚µ‚½MySQL‚Ìƒhƒ‰ƒCƒo‚ğw’è
+				// å…ˆç¨‹ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸMySQLã®ãƒ‰ãƒ©ã‚¤ãƒã‚’æŒ‡å®š
 				Class.forName("com.mysql.jdbc.Driver");
-				// MySQLƒf[ƒ^ƒx[ƒX‚ÉÚ‘± (DB–¼,ID,ƒpƒXƒ[ƒh‚ğw’è)
+				// MySQLãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«æ¥ç¶š (DBå,ID,ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’æŒ‡å®š)
 				myCon = DriverManager.getConnection("jdbc:mysql://localhost/php10?"+"user=root&password=12345");
 	
 				if(teachAi.isSelected()){
@@ -236,7 +237,7 @@ public class Fd extends JFrame {
 					String strSQL = "INSERT INTO aibrain02 (swinging, feeling, saying) VALUES('" + o + "','" + p + "','" +  syng.getText() + "')";
 					mySt = myCon.createStatement();
 					intCount = mySt.executeUpdate(strSQL);
-					showMyMessage("‘äŒ‚ğ"+intCount + "‚ÂAƒtƒ@ƒeƒBƒ}‚ÍŠo‚¦‚Ü‚µ‚½B");
+					showMyMessage("å°è©ã‚’"+intCount + "ã¤ã€ãƒ•ã‚¡ãƒ†ã‚£ãƒã¯è¦šãˆã¾ã—ãŸã€‚");
 				}
 	
 				if(hearAi.isSelected()){
@@ -255,9 +256,9 @@ public class Fd extends JFrame {
 					TalkAi(s,t);
 				}
 				//
-				//showMyMessage("‚”‚’‚™•¶“à‚Å" + o + "‚Æ" + p + "‚³‚ç‚É•½•ûª‚Í" + (int)Math.sqrt(o*p) + "‚Å‚·");
+				//showMyMessage("ï½”ï½’ï½™æ–‡å†…ã§" + o + "ã¨" + p + "ã•ã‚‰ã«å¹³æ–¹æ ¹ã¯" + (int)Math.sqrt(o*p) + "ã§ã™");
 				}catch (Exception ex) {
-					showMyMessage("—áŠO" + ex + "”­¶I");
+					showMyMessage("ä¾‹å¤–" + ex + "ç™ºç”Ÿï¼");
 				}finally{
 					try{
 						if(mySt != null) {
@@ -267,7 +268,7 @@ public class Fd extends JFrame {
 							myCon.close();
 					      	}
 					}catch(SQLException sx){
-						showMyMessage("ƒGƒ‰[”­¶" + sx);
+						showMyMessage("ã‚¨ãƒ©ãƒ¼ç™ºç”Ÿ" + sx);
 					}
 				}
 
@@ -285,7 +286,7 @@ public class Fd extends JFrame {
 		pnlMdl.add(fatima4);
 		pnlMdl.add(fatima5);
 
-		// ƒtƒŒ[ƒ€‚Éƒpƒlƒ‹‚ğƒZƒbƒgiBorderLayout‚Ì–k‘¤‚Æ^‚ñ’†j
+		// ãƒ•ãƒ¬ãƒ¼ãƒ ã«ãƒ‘ãƒãƒ«ã‚’ã‚»ãƒƒãƒˆï¼ˆBorderLayoutã®åŒ—å´ã¨çœŸã‚“ä¸­ï¼‰
 		this.add(panelAbove, BorderLayout.NORTH);
 		this.add(pnlMdl, BorderLayout.CENTER);
 		this.add(btnAction, BorderLayout.SOUTH);
@@ -305,7 +306,7 @@ public class Fd extends JFrame {
 
 		try {
 			mySt = myCon.createStatement() ;
-			//mySql‘¤‚ÌƒJƒ‰ƒ€‚Ì–¼‘O‚ğŒˆ‚ß‚é•K—v‚ª‚ ‚éBaibrain,swinging,feeling,saying
+			//mySqlå´ã®ã‚«ãƒ©ãƒ ã®åå‰ã‚’æ±ºã‚ã‚‹å¿…è¦ãŒã‚ã‚‹ã€‚aibrain,swinging,feeling,saying
 			myRs = mySt.executeQuery("SELECT * FROM aibrain WHERE feeling = "+AiF);
 			StringBuffer strMes = new StringBuffer();
 			String line;
@@ -317,7 +318,7 @@ public class Fd extends JFrame {
 			}
 			JOptionPane.showMessageDialog(this, strMes.toString());
 		}catch(Exception ex) {
-	//		showMyMessage("doUpdateAi‚ÅƒGƒ‰[”­¶F" + ex);
+	//		showMyMessage("doUpdateAiã§ã‚¨ãƒ©ãƒ¼ç™ºç”Ÿï¼š" + ex);
 			//intCount = 0;
 			}
 	}
