@@ -8,7 +8,7 @@ You should fill in 3 command.
 Finally push "Commit on",then Fake AI begins cheering you with very simply lines...
 
 【日本語訳】
-java,mysqlで組んだ、サーヴァーサイドのシンプルなチャットボット「Fatima Ai」の試作版です。
+java,mysqlで組んだ、シンプルなチャットボット「Fatima Ai」の試作版です。
 ユーザーは「Teach Ai」画面と「U hear Ai」画面で、このシンプルなAiチャットボットに
 二つの感情のバロメーターと言葉を覚えさせたり入力したり、会話をしたりできます。
 
