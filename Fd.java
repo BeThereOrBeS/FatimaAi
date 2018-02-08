@@ -3,6 +3,10 @@ import java.awt.event.*;
 import java.sql.*;
 import javax.swing.*;
 
+//this is the main program on Fatima-Ai.
+//and the templete of real AI chatting application in the future.
+//any useful API like math-common or stuff like that,i would add it.
+
 public class Fd extends JFrame {
 //	extends JFrameのほうが良い？
 
